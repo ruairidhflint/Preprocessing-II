@@ -4,8 +4,13 @@ nav {
     
     width: 100%;
     border-bottom: @border;
-    padding-top: 2rem;
+    padding-top: 0.8rem;
     padding-bottom: 2rem;
+
+    @media @mobile {
+        width: auto;
+        padding-bottom: 1rem;
+    }
 
     .top {
 
@@ -15,6 +20,21 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
+
+    @media @mobile {
+
+     flex-direction: column;
+     width:100%;
+     justify-content: space-between;
+     align-items: center;
+
+     h1 {
+         font-size: 3rem;
+         padding: 1.5rem;
+     }
+     
+              
+    }
     // margin-top: 1rem;
     
     // padding-left: 32rem;
@@ -25,6 +45,10 @@ nav {
         color: @font-color;
         font-size: 1.6rem;
         padding-right: 4rem;
+
+        @media @mobile {
+            padding: 3rem;
+        }
     }
 
 
